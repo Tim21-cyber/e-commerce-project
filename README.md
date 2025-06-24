@@ -1,29 +1,77 @@
+# 🛒 Swift-Basket
 
-# Swift-Basket Project 🛒
+Swift-Basket is a simple, responsive single-page e-commerce web application built using vanilla JavaScript, HTML, and CSS. It uses a mock backend powered by JSON Server and deployed via Railway to simulate a RESTful public API.
 
-A simple, elegant e-commerce SPA using Tailwind CSS, JavaScript, and JSON Server.
+---
 
-## 🔧 Step-by-Step Setup Instructions
+## 🧾 Project Summary
 
-### 1. Extract the ZIP and open the folder `Swift-Basket`
+This app allows users to browse products, add items to a cart, and simulate a checkout process. It’s designed to be clean, responsive, and beginner-friendly, with both light and dark modes.
 
-### 2. Install JSON Server
-```bash
+---
+
+## 👥 User Stories
+
+- As a user, I can view a list of products with their names, images, and prices.
+- As a user, I can add products to a shopping cart without reloading the page.
+- As a user, I can see all items added to my cart in a dedicated cart section.
+- As a user, I can click a “Checkout” button to simulate placing an order.
+- As a user, I can toggle between light and dark mode for a more personalized browsing experience.
+
+---
+
+## 🚀 Minimum Viable Product (MVP)
+
+1. **Product Listing**  
+   - Displays all products from the API with image, name, and price.
+
+2. **Shopping Cart Feature**  
+   - Users can add products to the cart dynamically.
+
+3. **Checkout Feature**  
+   - Simulates order submission via a POST request to the backend.
+
+4. **Dark/Light Mode Toggle**  
+   - UI toggle to switch between light and dark themes using CSS variables.
+
+5. **Responsive Layout**  
+   - Grid-based layout adapts to desktop and mobile screens.
+
+6. **Image Resizing + Product Containment**  
+   - Ensures all product images are displayed within equally-sized boxes for a clean layout.
+
+---
+
+## 🌐 Public API Used
+
+- **Tool:** [JSON Server]
+- **Endpoints:**
+  - `GET /products` – Fetch product data
+  - `POST /orders` – Submit order details
+
+---
+
+## 📁 Project Structure
+
+Swift-Basket/
+├── db.json # Backend database (products + orders)
+├── README.md # Project documentation
+└── client/
+├── index.html # Single Page Application UI
+├── styles.css # Light/Dark mode CSS styling
+└── script.js # JavaScript functionality
+
+---
+
+## 🛠️ Setup Instructions
+
+1. **Install JSON Server**  
+   ```bash
 npm install -g json-server
-```
 
-### 3. Run the Backend
+Run the API locally
 ```bash
 json-server --watch db.json --port 3000
-```
 
-This will start your API at: `http://localhost:3000`
-
-### 4. Open the Frontend
-Open `client/index.html` in your browser.
-
-## ✅ Endpoints
-- `GET /products`
-- `POST /orders`
-
-Enjoy your project!
+- Open the App
+- Open client/index.html in your browser.
