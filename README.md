@@ -65,11 +65,11 @@ Swift-Basket/
 ## 🛠️ Setup Instructions
 
 1. **Install JSON Server**  
-```bash
+
 npm install -g json-server
 
 2. **Run the API locally**
-```bash
+
 json-server --watch db.json --port 3000
 
 - Open App.
