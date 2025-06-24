@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Summer T-shirt",
+      "price": 7,
+      "image": "https://img.lovepik.com/element/45012/4525.png_860.png"
+    },
+    {
+      "id": "2",
+      "name": "NIKE Sneakers",
+      "price": 50,
+      "image": "https://freepngimg.com/save/55554-sneakers-png-file-hd/960x600"
+    },
+    {
+      "id": "3",
+      "name": "School Backpack",
+      "price": 30,
+      "image": "https://e7.pngegg.com/pngimages/866/591/png-clipart-backpack-satch-match-fond-of-bags-school-backpack-backpack-magenta-thumbnail.png"
+    }
+  ],
+  "orders": [
+    {
+      "id": "3ee0",
+      "items": [],
+      "createdAt": "2025-06-24T11:25:39.061Z"
+    },
+    {
+      "id": "cec9",
+      "items": [
+        {
+          "id": 1,
+          "name": "T-shirt",
+          "price": 20
+        },
+        {
+          "id": 2,
+          "name": "Sneakers",
+          "price": 50
+        },
+        {
+          "id": 3,
+          "name": "Backpack",
+          "price": 35
+        }
+      ],
+      "createdAt": "2025-06-24T11:25:48.577Z"
+    },
+    {
+      "id": "dead",
+      "items": [],
+      "createdAt": "2025-06-24T12:04:21.641Z"
+    },
+    {
+      "id": "5f2a",
+      "items": [],
+      "createdAt": "2025-06-24T12:05:10.685Z"
+    }
+  ]
+}
