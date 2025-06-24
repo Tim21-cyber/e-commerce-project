@@ -16,7 +16,7 @@ function renderProducts(products) {
     const div = document.createElement('div');
     div.className = 'bg-white p-4 rounded shadow';
     div.innerHTML = `
-      <img src="${prod.image}" class="w-full h-40 object-cover mb-2"/>
+      <img src="${prod.image}" class="w-30 h-40 object-contain mb-2"/>
       <h3 class="text-lg font-bold">${prod.name}</h3>
       <p class="text-gray-700">$${prod.price}</p>
       <button class="mt-2 bg-green-500 text-white px-3 py-1 rounded" onclick="addToCart(${prod.id}, '${prod.name}', ${prod.price})">Add to Cart</button>
