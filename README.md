@@ -1,4 +1,4 @@
-# 🛒 Swift-Basket 
+# 🛒 Swift-Basket Project
 
 Swift-Basket is a simple, responsive single-page e-commerce web application built using JavaScript, HTML, and CSS. It uses a mock backend powered by JSON Server and a Mock RESTful public API.
 
@@ -72,10 +72,10 @@ npm install -g json-server
 
 json-server --watch db.json --port 3000
 
-- Open App.
 - Open client/index.html in your browser.
  
  ---
 
 👤 Author
+
 Created by Timothy Ochieng
