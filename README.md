@@ -1,11 +1,10 @@
-# 🛒 Swift-Basket
+# 🛒 Swift-Basket 
 
-Swift-Basket is a simple, responsive single-page e-commerce web application built using vanilla JavaScript, HTML, and CSS. It uses a mock backend powered by JSON Server and deployed via Railway to simulate a RESTful public API.
+Swift-Basket is a simple, responsive single-page e-commerce web application built using JavaScript, HTML, and CSS. It uses a mock backend powered by JSON Server and  a Mock RESTful public API.
 
 ---
 
 ## 🧾 Project Summary
-
 This app allows users to browse products, add items to a cart, and simulate a checkout process. It’s designed to be clean, responsive, and beginner-friendly, with both light and dark modes.
 
 ---
