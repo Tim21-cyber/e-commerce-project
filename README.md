@@ -1,6 +1,6 @@
 # 🛒 Swift-Basket 
 
-Swift-Basket is a simple, responsive single-page e-commerce web application built using JavaScript, HTML, and CSS. It uses a mock backend powered by JSON Server and  a Mock RESTful public API.
+Swift-Basket is a simple, responsive single-page e-commerce web application built using JavaScript, HTML, and CSS. It uses a mock backend powered by JSON Server and a Mock RESTful public API.
 
 ---
 
@@ -65,12 +65,17 @@ Swift-Basket/
 ## 🛠️ Setup Instructions
 
 1. **Install JSON Server**  
-   ```bash
+```bash
 npm install -g json-server
 
-Run the API locally
+2. **Run the API locally**
 ```bash
 json-server --watch db.json --port 3000
 
-- Open the App
+- Open App.
 - Open client/index.html in your browser.
+ 
+ ---
+
+👤 Author
+Created by Timothy Ochieng
