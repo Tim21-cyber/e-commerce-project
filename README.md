@@ -72,7 +72,7 @@ npm install -g json-server
 
 json-server --watch db.json --port 3000
 
-- Open client/index.html in your browser.
+3. **Open client/index.html in your browser**
  
  ---
 
