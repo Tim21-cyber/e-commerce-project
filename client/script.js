@@ -1,61 +1,57 @@
 
-const API = 'http://localhost:3000'; 
 let cart = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch(`${API}/products`)
-    .then(res => res.json())
-    .then(data => renderProducts(data));
+  document.getElementById('toggle-theme').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
 
-  document.getElementById('checkout-btn').addEventListener('click', checkout);
+  fetch('http://localhost:3000/products')
+    .then(res => res.json())
+    .then(products => {
+      renderProducts(products);
+      document.getElementById('search-input').addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = products.filter(p => p.name.toLowerCase().includes(term));
+        renderProducts(filtered);
+      });
+    });
+
+  document.getElementById('checkout').addEventListener('click', () => {
+    if (cart.length === 0) {
+      alert("🛒 Your cart is empty!");
+    } else {
+      alert("✅ Order placed! Thank you for shopping with Swift Basket.");
+      cart = [];
+      updateCartTotal();
+    }
+  });
 });
 
 function renderProducts(products) {
   const container = document.getElementById('products');
-  products.forEach(prod => {
+  container.innerHTML = '';
+  products.forEach(product => {
     const div = document.createElement('div');
-    div.className = 'bg-white p-4 rounded shadow';
+    div.className = 'product';
+    const badge = product.price < 100 ? '<span class="badge">SALE</span>' : '';
     div.innerHTML = `
-      <img src="${prod.image}" class="w-40 h-40 object-contain mb-2"/>
-      <h3 class="text-lg font-bold">${prod.name}</h3>
-      <p class="text-gray-700">$${prod.price}</p>
-      <button class="mt-2 bg-green-500 text-white px-3 py-1 rounded" onclick="addToCart(${prod.id}, '${prod.name}', ${prod.price})">Add to Cart</button>
+      ${badge}
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>$${product.price}</p>
+      <button onclick='addToCart(${product.price})'>Add to Cart</button>
     `;
     container.appendChild(div);
   });
 }
 
-function addToCart(id, name, price) {
-  cart.push({ id, name, price });
-  renderCart();
+function addToCart(price) {
+  cart.push(price);
+  updateCartTotal();
 }
 
-function renderCart() {
-  const cartList = document.getElementById('cart-items');
-  cartList.innerHTML = '';
-  cart.forEach(item => {
-    const li = document.createElement('li');
-    li.textContent = `${item.name} - $${item.price}`;
-    cartList.appendChild(li);
-  });
+function updateCartTotal() {
+  const total = cart.reduce((sum, val) => sum + val, 0);
+  document.getElementById('cart-summary').textContent = `🛍️ Cart Total: $${total}`;
 }
-
-function checkout() {
-  fetch(`${API}/orders`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ items: cart, createdAt: new Date().toISOString() })
-  }).then(() => {
-    alert('Order placed!');
-    cart = [];
-    renderCart();
-  });
-}
-
-// Theme toggle
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('theme-toggle');
-  toggle.addEventListener('change', () => {
-    document.documentElement.setAttribute('data-theme', toggle.checked ? 'dark' : 'light');
-  });
-});
