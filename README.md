@@ -46,8 +46,7 @@ Swift-Basket is a simple, responsive single-page e-commerce web application buil
 
 ## 🌐 Public API Used
 
-- Mock RESTful API
-- **Tool:** [JSON Server]
+- **Tool:** [JSON Server], Mock RESTful API
 - **Endpoints:**
   - `GET /products` – Fetch product data
   - `POST /orders` – Submit order details
