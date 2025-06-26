@@ -8,7 +8,7 @@ Swift-Basket is a simple, responsive single-page e-commerce web application buil
 
 - This app allows users to browse products, add items to a cart, and simulate a checkout process. 
 
-- It’s designed to be clean, responsive, and beginner-friendly, with both light and dark modes.
+- It’s designed to be clean, responsive, and user-friendly, with both light and dark modes.
 
 ---
 
